@@ -1,0 +1,145 @@
+body {   
+    background: linear-gradient(0deg, #363636 50%, black 100%);
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    min-height: 195vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.x {
+    transition: border-color 0.5s ease-in-out;
+    transition: 500ms linear;
+    animation: deslizar 2s ease-in-out;
+    animation: gradient-border 2s linear infinite;
+}
+.x:hover {
+    border: 7px solid #136497;
+    border-radius: 20px;
+    transform: scale(0.8);
+    background:linear-gradient(0deg, #BF0BB3 50%, #5E1099 100%) border-box;
+}
+
+@keyframes gradient-border {
+    0% {
+        border-image-slice: 1;
+        border-color: transparent;
+        filter: blur(0px);
+    }
+    20% {
+        border-image-slice: 1;
+        border-color: #BF0BB3;
+        filter: blur(0px);
+    }
+
+    40%{
+        border-image-slice: 1;
+        border-color: #5E1099;
+        filter: blur(0px);
+    }
+
+    60%{
+        border-image-slice: 1;
+        border-color: #5E1099;
+        filter: blur(0px);
+    }
+
+    80%{
+        border-image-slice: 1;
+        border-color: #BF0BB3;
+        filter: blur(0px);
+    }
+
+    100% {
+        border-image-slice: 1;
+        border-color: transparent;
+        filter: blur(0px);
+    }
+}
+
+/*.x {
+    transition: 500ms linear;
+    animation: deslizar 2s ease-in-out;
+}*/
+
+/*.x:hover {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+}*/
+
+/*.y{
+    transition: all .5s;
+    border: 10px solid transparent;
+}
+.y:hover{
+    border: 10px solid #136497;
+    border-radius: 20%;
+}*/
+
+.wrapper {
+    flex: 1;
+}
+
+.T {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.y {
+    width: 600px;
+    margin-bottom: 1px;
+    position: relative;
+    animation: deslizar 2s ease-in-out;
+}
+
+@keyframes deslizar {
+    from {
+        right: -80%;
+    }
+    to {
+        right: 0%;
+    }
+}
+
+@media (max-width: 768px){
+    body {
+        background: linear-gradient(0deg, #363636 50%, black 100%);
+        height: 100%;
+        margin-top: -520px;
+  }
+  .T {
+    margin-top: -200px;
+    padding: 20px;
+  }
+    img {
+        width: 370px;
+        justify-content: center;
+    }
+    .y {
+        width: 320px;
+        justify-content: center;
+    }
+}
+
+.f {
+    padding: 10px;
+    color: aliceblue;
+    text-align: center;
+}
